@@ -39,4 +39,8 @@ app.put("/student/:id", async (req, res) => {
   res.send(result);
 });
 
+app.get("*", async (req, res) => {
+  res.send("Invalid URL");
+});
+
 app.listen(4000);
